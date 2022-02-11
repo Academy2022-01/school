@@ -1,0 +1,7 @@
+
+Matricola: 0 Nome: hikmat  Cognome: delfino 
+Matricola: 1 Nome: paolo  Cognome: feroci 
+Matricola: 2 Nome: lorenzo  Cognome: moguro 
+Matricola: 3 Nome: anna  Cognome: liciuccia 
+Matricola: 4 Nome: fedeica  Cognome: manoamica 
+Matricola: 0 Nome: giulia  Cognome: ok 
