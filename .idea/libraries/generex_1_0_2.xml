@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="generex-1.0.2">
+    <CLASSES>
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/generex-1.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
