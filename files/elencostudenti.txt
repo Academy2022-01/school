@@ -1,0 +1,12 @@
+Student{name = 'Joseph', surname = 'Joestar', code = '738821', tutor = 'Nene Momosuzu'} 
+Student{name = 'Arturo', surname = 'Armando', code = '985051', tutor = 'Nessun tutor assegnato'} 
+Student{name = 'Ugo', surname = 'Amogus', code = '163009', tutor = 'Botan Shishiro'} 
+Student{name = 'Sus', surname = 'Amogus', code = '572868', tutor = 'Nessun tutor assegnato'} 
+Student{name = 'Joseph', surname = 'Joestar', code = '105490', tutor = 'Nene Momosuzu'} 
+Student{name = 'Arturo', surname = 'Armando', code = '612355', tutor = 'Nessun tutor assegnato'} 
+Student{name = 'Ugo', surname = 'Amogus', code = '159454', tutor = 'Botan Shishiro'} 
+Student{name = 'Sus', surname = 'Amogus', code = '125078', tutor = 'Nessun tutor assegnato'} 
+Student{name = 'Joseph', surname = 'Joestar', code = '444182', tutor = 'Nene Momosuzu'} 
+Student{name = 'Arturo', surname = 'Armando', code = '070604', tutor = 'Nessun tutor assegnato'} 
+Student{name = 'Ugo', surname = 'Amogus', code = '500784', tutor = 'Botan Shishiro'} 
+Student{name = 'Sus', surname = 'Amogus', code = '008784', tutor = 'Nessun tutor assegnato'} 
