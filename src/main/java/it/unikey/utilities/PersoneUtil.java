@@ -4,62 +4,69 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.HashSet;
+import java.util.Set;
 
 import it.unikey.entities.Persona;
 import it.unikey.entities.Scuola;
 import it.unikey.entities.Studente;
+import it.unikey.entities.Tutor;
+import lombok.Getter;
 
-public class PersoneUtil {
+@Getter
+public abstract class PersoneUtil {
 
-    /* public static <T extends Persona> boolean isPersonaInFile(T persona) {
-        if(persona.getClass().getSimpleName().equals("Studente")) {
-            try(FileInputStream in = new FileInputStream("./src/main/java/it/unikey/files/elencostudenti.txt");
-                Stream<String> righeFile = Files.lines(Paths.get("./src/main/java/it/unikey/files/elencostudenti.txt"));
-                ObjectInputStream oIn = new ObjectInputStream(in);) {
-                righeFile
-                .map(x -> {
-                    File riga = new File()
-                })
+    @Getter
+    public static final String pathStudenti = "./src/main/java/it/unikey/files/elencostudenti.txt";
+    public static final String pathTutor = "./src/main/java/it/unikey/files/elencotutor.txt";
 
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-                
-            /* Files.lines()) {
-                ObjectInputStream oIn = new ObjectInputStream(in);
-                //Scuola.getSetStudenti().addAll(
-                
-                    
-                //)
-            } catch (Exception e) {
-                e.printStackTrace();
-            } 
+    public static Set<? extends Persona> getSetPersoneDaFile(String sottotipo) {
+        String path;
+        if (sottotipo.equalsIgnoreCase("Studente"))
+            path = PersoneUtil.pathStudenti;
+        else
+            path = PersoneUtil.pathTutor;
+        try (FileInputStream in = new FileInputStream(path)) {
+            ObjectInputStream oIn = new ObjectInputStream(in);
+            return (Set<? extends Persona>) oIn.readObject();
+        } catch (Exception e) {
+            return null;
         }
-
-        return false;
-    }  */
-
-    public static <T extends Persona> void scriviSuFile(T persona) {
-        if(persona.getClass().getSimpleName().equals("Studente")) {
-            try(FileOutputStream out = new FileOutputStream("./src/main/java/it/unikey/files/elencostudenti.txt", true);
-                ObjectOutputStream oOut = new ObjectOutputStream(out)) {
-                oOut.writeObject(persona);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        } else if(persona.getClass().getSimpleName().equals("Tutor")) {
-            try(FileOutputStream out = new FileOutputStream("./src/main/java/it/unikey/files/elencotutor.txt", true);
-            ObjectOutputStream oOut = new ObjectOutputStream(out)) {
-                oOut.writeObject(persona);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-       
     }
-    
+
+    public static void inizializzaSetsPersone() {
+        if (getSetPersoneDaFile("Studente") != null)
+            Scuola.setStudenti = new HashSet<>((Set<Studente>) getSetPersoneDaFile("Studente"));
+        else
+            Scuola.setStudenti = new HashSet<>();
+        if (getSetPersoneDaFile("Tutor") != null)
+            Scuola.setTutor = new HashSet<>((Set<Tutor>) getSetPersoneDaFile("Tutor"));
+        else
+            Scuola.setTutor = new HashSet<>();
+    }
+
+    // REFACTOR
+    public static void scriviSetSuFile(Set<? extends Persona> setPersone) {
+        String nomeClasse = setPersone.iterator().next().getClass().getSimpleName();
+        String pathCorretto = "";
+        if (nomeClasse.equals("Studente"))
+            pathCorretto = pathStudenti;
+        else if (nomeClasse.equals("Tutor"))
+            pathCorretto = pathTutor;
+        try (FileOutputStream out = new FileOutputStream(pathCorretto)) {
+            ObjectOutputStream oOut = new ObjectOutputStream(out);
+            oOut.writeObject(setPersone);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static Tutor cercaTutor(String nome, String cognome) {
+        for (Tutor tutor : Scuola.setTutor) {
+            if (tutor.getNome().equals(nome) && tutor.getCognome().equals(cognome))
+                return tutor;
+        }
+        return null;
+    }
+
 }

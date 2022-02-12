@@ -10,6 +10,7 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 import it.unikey.utilities.PasswordField;
+import it.unikey.utilities.PersoneUtil;
 
 public abstract class Login {
 
@@ -28,7 +29,8 @@ public abstract class Login {
             utenteLoggando = new HashMap<String, String>();
             utenteLoggando.put(username, password);
             try {
-                List<Map<String, String>> listaUtenti = Files.lines(Paths.get("./src/main/java/it/unikey/files/utenze.txt"))
+                List<Map<String, String>> listaUtenti = Files
+                        .lines(Paths.get("./src/main/java/it/unikey/files/utenze.txt"))
                         .map(x -> {
                             HashMap<String, String> account = new HashMap<>();
                             account.put(x.split(" ")[0], x.split(" ")[1]);
@@ -39,8 +41,7 @@ public abstract class Login {
                     isValidUser = true;
                     System.out.println("\nBenvenuto " + username + "!");
                     break;
-                }
-                else
+                } else
                     System.out.println("\nErrore: login errato");
 
             } catch (IOException e) {
@@ -48,9 +49,10 @@ public abstract class Login {
             }
         } while (++tentativi < 3);
 
-        if(isValidUser)
+        if (isValidUser) {
+            PersoneUtil.inizializzaSetsPersone();
             Menu.launch();
-        else
+        } else
             System.out.println("\nErrore: 3 tentativi di login consecutivi errati, riavvia il programma!");
     }
 }

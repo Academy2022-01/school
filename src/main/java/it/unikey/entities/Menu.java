@@ -1,29 +1,32 @@
 package it.unikey.entities;
 
 import it.unikey.utilities.IntUtil;
+import it.unikey.utilities.PersoneUtil;
 import lombok.Getter;
 
 @Getter
 public abstract class Menu {
 
-    public static void launchAgain() {
+    public static void checkNewIteration() {
         boolean isOption = false;
         System.out.print("\nVuoi tornare al menu'(si/no): ");
         String input = Login.input.nextLine();
         do {
-            if(input.equalsIgnoreCase("si")) {
+            if (input.equalsIgnoreCase("si")) {
                 isOption = true;
                 Menu.launch();
-            }
-            else if(input.equalsIgnoreCase("no")) {
+            } else if (input.equalsIgnoreCase("no")) {
                 isOption = true;
+                if (Scuola.getSetStudenti().size() != 0)
+                    PersoneUtil.scriviSetSuFile(Scuola.getSetStudenti());
+                if (Scuola.getSetTutor().size() != 0)
+                    PersoneUtil.scriviSetSuFile(Scuola.getSetTutor());
                 System.out.println("\nAu Revoir, Shoshanna!!!");
-            }
-            else {
+            } else {
                 System.out.print("\nErrore: non ho capito, vuoi tornare al menu'(si/no): ");
                 input = Login.input.nextLine();
             }
-        } while(!isOption);
+        } while (!isOption);
     }
 
     public static void launch() {
@@ -52,12 +55,12 @@ public abstract class Menu {
 
                     case 3:
                         isOption = true;
-                        Scuola.visualizzaStudenti(Scuola.getSetStudenti());
+                        Scuola.visualizzaPersone(Scuola.getSetStudenti());
                         break;
 
                     case 4:
                         isOption = true;
-                        Scuola.visualizzaTutor(Scuola.getSetTutor());
+                        Scuola.visualizzaPersone(Scuola.getSetTutor());
                         break;
 
                     case 0:

@@ -4,8 +4,8 @@ public abstract class IntUtil {
 
     public static boolean isInt(String nToCheck) {
         try {
-           Integer.parseInt(nToCheck);
-           return true;
+            Integer.parseInt(nToCheck);
+            return true;
         } catch (Exception e) {
             return false;
         }
@@ -14,6 +14,5 @@ public abstract class IntUtil {
     public int toInt(String nToParse) {
         return Integer.parseInt(nToParse);
     }
-
 
 }

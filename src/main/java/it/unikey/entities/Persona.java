@@ -22,6 +22,4 @@ public abstract class Persona implements Serializable, Comparable<Persona>, Clon
         return Comparator.comparing(Persona::getCognome).thenComparing(Persona::getNome).compare(this, o);
     }
 
-    
-
 }
