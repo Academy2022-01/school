@@ -11,7 +11,7 @@ import lombok.Getter;
 
 @Getter
 public class Tutor extends Persona {
-    private static List<String> formatStrings = Arrays.asList("d/M/y", "d-M-y", "y/M/d", "y-M-d");
+    private static List<String> formatStrings = Arrays.asList("d/M/y", "d-M-y", "dd-M-yyyy", "dd/M/yyyy", "y/M/d", "y-M-d");
 
     private Date dataDiNascita;
 
@@ -20,7 +20,7 @@ public class Tutor extends Persona {
         for (String formatString : formatStrings) {
             try {
                 this.dataDiNascita = new SimpleDateFormat(formatString).parse(dataDiNascita);
-                // break;
+                break;
             } catch (ParseException e) {
             }
         }
@@ -35,9 +35,12 @@ public class Tutor extends Persona {
         System.out.print("\nInserisci la data di nascita: ");
         String dataDiNascita = Login.input.nextLine();
         Tutor nuovoTutor = new Tutor(nome, cognome, dataDiNascita);
-
-        Scuola.getSetTutor().add(nuovoTutor);
-        System.out.println("\nIl tutor " + nome + " " + cognome + " e' stato inserito con successo!");
+        if(Scuola.getSetTutor().contains(nuovoTutor))
+            System.out.println("\nErrore: " + nome + " " + cognome + " e' gia' presente nella lista dei tutor!");
+        else {
+            Scuola.getSetTutor().add(nuovoTutor);
+            System.out.println("\nIl tutor " + nome + " " + cognome + " e' stato inserito con successo!");
+        }
         Menu.checkNewIteration();
     }
 
@@ -46,5 +49,24 @@ public class Tutor extends Persona {
         return "Tutor(nome=" + super.getNome() + ", cognome=" + super.getCognome() + ", dataDiNascita="
                 + (new SimpleDateFormat("dd/MM/yyyy").format(dataDiNascita)) + ")";
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (!super.equals(obj))
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Tutor other = (Tutor) obj;
+        if (dataDiNascita == null) {
+            if (other.dataDiNascita != null)
+                return false;
+        } else if (!dataDiNascita.equals(other.dataDiNascita))
+            return false;
+        return true;
+    }
+    
+    
 
 }

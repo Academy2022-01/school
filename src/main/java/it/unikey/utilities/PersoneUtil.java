@@ -21,11 +21,11 @@ public abstract class PersoneUtil {
     public static final String pathTutor = "./src/main/java/it/unikey/files/elencotutor.txt";
 
     public static Set<? extends Persona> getSetPersoneDaFile(String sottotipo) {
-        String path;
-        if (sottotipo.equalsIgnoreCase("Studente"))
-            path = PersoneUtil.pathStudenti;
-        else
-            path = PersoneUtil.pathTutor;
+        String path = "";
+        if (sottotipo.equals("Studente"))
+            path = pathStudenti;
+        else if(sottotipo.equals("Tutor"))
+            path = pathTutor;
         try (FileInputStream in = new FileInputStream(path)) {
             ObjectInputStream oIn = new ObjectInputStream(in);
             return (Set<? extends Persona>) oIn.readObject();

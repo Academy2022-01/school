@@ -27,7 +27,6 @@ public class Studente extends Persona {
             Scuola.getSetStudenti().add(nuovoStudente);
             System.out.println("\nLo studente " + nome + " " + cognome + " e'stato inserito con successo!");
         }
-
         Menu.checkNewIteration();
     }
 

@@ -1,5 +1,6 @@
 package it.unikey.entities;
 
+import java.io.Console;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -15,6 +16,7 @@ import it.unikey.utilities.PersoneUtil;
 public abstract class Login {
 
     public static Scanner input = new Scanner(System.in);
+    private static Console console = System.console();
 
     public static void launch() {
         boolean isValidUser = false;
@@ -25,7 +27,9 @@ public abstract class Login {
         do {
             System.out.print("\nInserisci il nome utente: ");
             String username = input.nextLine();
-            String password = PasswordField.readPassword("\nInserisci la password: ");
+            //String password = PasswordField.readPassword("\nInserisci la password: ");
+            System.out.print("\nInserisci la password: ");
+            String password = String.valueOf(console.readPassword());
             utenteLoggando = new HashMap<String, String>();
             utenteLoggando.put(username, password);
             try {
