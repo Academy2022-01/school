@@ -14,24 +14,27 @@ public class UserInterface {
 
     static Scanner scanner = new Scanner(System.in);
     static boolean closedFromLaunchMenu = false;
-    static boolean continueToRunMenu = true;
+    static boolean choise = true;
 
 
     public static void launchMenu() {
-        System.out.println("1 - Inserisci Studente\n" +
-                "2 - Inserisci Tutor\n" +
-                "3 - Visualizza Studenti\n" +
-                "4 - Visualizza Tutor\n" +
-                "5 - Esci dal Programma");
-        boolean choise = false;
+
+        if(choise) {
+            System.out.println("1 - Inserisci Studente\n" +
+                    "2 - Inserisci Tutor\n" +
+                    "3 - Visualizza Studenti\n" +
+                    "4 - Visualizza Tutor\n" +
+                    "5 - Esci dal Programma");
+        }
         Integer number = returnChoise();
-        while (!choise) {
+        while (choise) {
             switch (number){
                 case 1:
                     scanner = new Scanner(System.in);
                     String name = askName();
                     scanner = new Scanner(System.in);
                     String surname = askSurname();
+                    System.out.println(surname);
                     School.addPerson(new Student(name, surname));
                     launchMenu();
                     break;
@@ -54,8 +57,8 @@ public class UserInterface {
                     launchMenu();
                     break;
                 case 5:
-                    choise = true;
-                    return;
+                    choise = false;
+                    break;
                 default:
                     System.out.println("Scelta non disponibile, scegliere una delle seguenti opzioni: ");
                     launchMenu();
@@ -71,9 +74,10 @@ public class UserInterface {
             return getOnlyStringInput();
         } catch (Exception e) {
             System.out.println("L'input non può contenere numeri");
-            askName();
+            return askName();
         }
-        return null;
+        //TODO chiedere perchè non può tornare null
+        //return null;
     }
 
 
@@ -83,22 +87,21 @@ public class UserInterface {
             return getOnlyStringInput();
         } catch (Exception e) {
             System.out.println("L'input non può contenere numeri");
-            askSurname();
+            return askSurname();
         }
-        return null;
     }
 
 
     public static LocalDate askDateTutor(){
-              try {
+
+        try {
             System.out.println("Inserisci la data di nascita: ");
-                  LocalDate date = LocalDate.parse(scanner.nextLine());
+            LocalDate date = LocalDate.parse(scanner.nextLine());
             return date;
         } catch (Exception e) {
             System.out.println("Inserisci il formato di data corretto (aaa-mm-gg)");
-            askDateTutor();
+            return askDateTutor();
         }
-        return null;
     }
 
     public static boolean isInteger (String strNum){
