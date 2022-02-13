@@ -25,6 +25,7 @@ public class UserInterface {
         String password = scanner.nextLine();
         try {
             FileLog.checkUser(username, password);
+            choise = true;
             launchMenu();
         } catch (UsernameNotFoundException e) {
             System.out.println("L'username non è valido!");
