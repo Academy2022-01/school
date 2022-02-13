@@ -1,12 +1,11 @@
-package entities;
+package it.unikey.entities;
 
-import exception.NotFoundException;
-import exception.TutorAlreadyExsistsException;
+import it.unikey.exception.TutorAlreadyExsistsException;
 
 import java.time.LocalDate;
 import java.util.*;
 
-import static entities.School.*;
+import static it.unikey.entities.School.*;
 
 public class Tutor extends Person {
 

@@ -1,22 +1,12 @@
 package it.unikey;
 
 import Menù.UserInterface;
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-import control.FileLog;
-import entities.School;
-import entities.Student;
-import entities.Tutor;
-import exception.TutorAlreadyExsistsException;
-import fileGestion.FileGestion;
-import java.time.LocalDate;
-import java.util.Arrays;
-import static entities.School.mapStudentTutor;
-import static entities.School.mapTutorStudent;
+import it.unikey.control.FileLog;
 
 public class Main {
     public static void main(String[] args) {
 
-        FileLog.checkUser("alessiog", "1234a");
+        //FileLog.checkUser("alessiog", "1234a");
 
         /*Tutor francesco = new Tutor("francesco", "di rosa", "1993-12-11");
         Tutor sara = new Tutor("sara", "gaudiosi", "1994-10-20");
@@ -57,7 +47,7 @@ public class Main {
         Tutor.printStudentForTutor();*/
 
         UserInterface us = new UserInterface();
-        UserInterface.launchMenu();
+        UserInterface.login();
 
 
     }

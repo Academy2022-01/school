@@ -1,4 +1,4 @@
-package entities;
+package it.unikey.entities;
 
 public abstract class Person {
 

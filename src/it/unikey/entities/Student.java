@@ -1,8 +1,8 @@
-package entities;
+package it.unikey.entities;
 
 import java.util.Objects;
 
-import static entities.School.*;
+import static it.unikey.entities.School.*;
 
 public class Student extends Person {
 

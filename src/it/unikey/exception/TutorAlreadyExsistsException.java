@@ -1,7 +1,7 @@
-package exception;
+package it.unikey.exception;
 
-import entities.Student;
-import entities.Tutor;
+import it.unikey.entities.Student;
+import it.unikey.entities.Tutor;
 
 public class TutorAlreadyExsistsException extends Exception{
     public TutorAlreadyExsistsException(Student student, Tutor tutor) {
