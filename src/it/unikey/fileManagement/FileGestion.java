@@ -1,4 +1,4 @@
-package it.unikey.fileGestion;
+package it.unikey.fileManagement;
 
 import it.unikey.entities.School;
 import java.io.IOException;

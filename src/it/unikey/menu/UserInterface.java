@@ -1,4 +1,4 @@
-package Menù;
+package it.unikey.menu;
 
 import it.unikey.control.FileLog;
 import it.unikey.entities.School;
