@@ -1,9 +1,8 @@
-package Menù;
+package it.unikey.menu;
 
-import entities.Person;
-import entities.School;
-import entities.Student;
-import entities.Tutor;
+import it.unikey.entities.School;
+import it.unikey.entities.Student;
+import it.unikey.entities.Tutor;
 
 import java.time.LocalDate;
 import java.util.Arrays;

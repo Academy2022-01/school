@@ -1,4 +1,4 @@
-package exception;
+package it.unikey.exception;
 
 public class NotFoundException extends Exception {
     public NotFoundException(String message) {

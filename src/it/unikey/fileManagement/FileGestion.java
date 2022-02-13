@@ -1,6 +1,6 @@
-package fileGestion;
+package it.unikey.fileManagement;
 
-import entities.School;
+import it.unikey.entities.School;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -10,8 +10,8 @@ import java.nio.file.StandardOpenOption;
 
 public class FileGestion {
 
-    static String pathStudent = "C:\\Users\\paolu\\IdeaProjects\\Scuola\\src\\log\\listStudent.txt";
-    static String pathTutor = "C:\\Users\\paolu\\IdeaProjects\\Scuola\\src\\log\\listTutor.txt";
+    static String pathStudent = "C:\\Users\\flvbr\\IdeaProjects\\school\\src\\it\\unikey\\log\\listStudent.txt";
+    static String pathTutor = "C:\\Users\\flvbr\\IdeaProjects\\school\\src\\it\\unikey\\log\\listTutor.txt";
 
     public static void writeListStudent(){
         School.setStudent.forEach(s -> {

@@ -1,17 +1,7 @@
 package it.unikey;
 
-import Menù.UserInterface;
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-import control.FileLog;
-import entities.School;
-import entities.Student;
-import entities.Tutor;
-import exception.TutorAlreadyExsistsException;
-import fileGestion.FileGestion;
-import java.time.LocalDate;
-import java.util.Arrays;
-import static entities.School.mapStudentTutor;
-import static entities.School.mapTutorStudent;
+import it.unikey.menu.UserInterface;
+import it.unikey.control.FileLog;
 
 public class Main {
     public static void main(String[] args) {

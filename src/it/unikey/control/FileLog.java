@@ -1,21 +1,19 @@
-package control;
+package it.unikey.control;
 
-import exception.PasswordNotFoundException;
+import it.unikey.exception.PasswordNotFoundException;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 
 
 public class FileLog {
 
-    static String path = "C:\\Users\\paolu\\IdeaProjects\\Scuola\\src\\log\\users.txt";
+    static String path = "C:\\Users\\flvbr\\IdeaProjects\\school\\src\\it\\unikey\\log\\users.txt";
 
     public static void checkUser(String user, String password) {
 
