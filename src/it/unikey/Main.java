@@ -1,12 +1,15 @@
 package it.unikey;
 
 import it.unikey.menu.UserInterface;
+<<<<<<< HEAD
 import it.unikey.control.FileLog;
+=======
+>>>>>>> Alessio_Paolucci
 
 public class Main {
     public static void main(String[] args) {
 
-        FileLog.checkUser("alessiog", "1234a");
+        //FileLog.checkUser("alessiog", "1234a");
 
         /*Tutor francesco = new Tutor("francesco", "di rosa", "1993-12-11");
         Tutor sara = new Tutor("sara", "gaudiosi", "1994-10-20");
@@ -47,7 +50,7 @@ public class Main {
         Tutor.printStudentForTutor();*/
 
         UserInterface us = new UserInterface();
-        UserInterface.launchMenu();
+        UserInterface.login();
 
 
     }

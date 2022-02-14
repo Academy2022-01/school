@@ -1,6 +1,10 @@
 package it.unikey.control;
 
 import it.unikey.exception.PasswordNotFoundException;
+<<<<<<< HEAD
+=======
+import it.unikey.exception.UsernameNotFoundException;
+>>>>>>> Alessio_Paolucci
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -13,9 +17,13 @@ import java.util.Map;
 
 public class FileLog {
 
+<<<<<<< HEAD
     static String path = "C:\\Users\\flvbr\\IdeaProjects\\school\\src\\it\\unikey\\log\\users.txt";
+=======
+    static String path = "C:\\Users\\paolu\\IdeaProjects\\Scuola\\src\\it\\unikey\\log\\users.txt";
+>>>>>>> Alessio_Paolucci
 
-    public static void checkUser(String user, String password) {
+    public static void checkUser(String user, String password) throws PasswordNotFoundException, UsernameNotFoundException{
 
         try {
             Map<String, String> mapUser = new HashMap<>();
@@ -33,17 +41,21 @@ public class FileLog {
             }
             for (String a : mapUser.keySet()) {
                 if (a.equals(user)) {
-                    if (mapUser.get(a).equals(password))
+                    if (mapUser.get(a).equals(password)) {
                         System.out.println("L'user è esistente");
-                    else
-                        throw new PasswordNotFoundException("Non sei registrato!");
+                        break;
+                    }else {
+                        throw new PasswordNotFoundException("Password non trovata");
+                    }
+
+                } else {
+                    throw new UsernameNotFoundException("Username non trovato");
                 }
+
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
-            e.printStackTrace();
-        } catch (PasswordNotFoundException e) {
             e.printStackTrace();
         }
 

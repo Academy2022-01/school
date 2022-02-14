@@ -1,8 +1,12 @@
 package it.unikey.menu;
 
+
+import it.unikey.control.FileLog;
 import it.unikey.entities.School;
 import it.unikey.entities.Student;
 import it.unikey.entities.Tutor;
+import it.unikey.exception.PasswordNotFoundException;
+import it.unikey.exception.UsernameNotFoundException;
 
 import java.time.LocalDate;
 import java.util.Arrays;
@@ -15,10 +19,28 @@ public class UserInterface {
     static boolean closedFromLaunchMenu = false;
     static boolean choise = true;
 
-    
+    public static void login() {
+
+        System.out.println("Inserisci un username:");
+        String username = scanner.nextLine();
+        System.out.println("Inserisci la password:");
+        String password = scanner.nextLine();
+        try {
+            FileLog.checkUser(username, password);
+            choise = true;
+            launchMenu();
+        } catch (UsernameNotFoundException e) {
+            System.out.println("L'username non è valido!");
+            choise = false;
+            login();
+        }catch (PasswordNotFoundException e){
+            System.out.println("La password è sbagliata!");
+            choise = false;
+            login();
+        }
+    }
 
     public static void launchMenu() {
-
         if(choise) {
             System.out.println("1 - Inserisci Studente\n" +
                     "2 - Inserisci Tutor\n" +
@@ -26,6 +48,7 @@ public class UserInterface {
                     "4 - Visualizza Tutor\n" +
                     "5 - Esci dal Programma");
         }
+        scanner = new Scanner(System.in);
         Integer number = returnChoise();
         while (choise) {
             switch (number){
@@ -34,7 +57,6 @@ public class UserInterface {
                     String name = askName();
                     scanner = new Scanner(System.in);
                     String surname = askSurname();
-                    System.out.println(surname);
                     School.addPerson(new Student(name, surname));
                     launchMenu();
                     break;
