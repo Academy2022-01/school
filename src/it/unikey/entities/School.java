@@ -1,6 +1,4 @@
-package entities;
-
-import exception.NotFoundException;
+package it.unikey.entities;
 
 import java.util.*;
 import java.util.stream.Collectors;

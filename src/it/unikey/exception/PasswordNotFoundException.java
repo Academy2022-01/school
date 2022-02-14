@@ -1,4 +1,4 @@
-package exception;
+package it.unikey.exception;
 
 public class PasswordNotFoundException extends Exception {
 
