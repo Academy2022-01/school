@@ -55,7 +55,6 @@ public class UserInterface {
                     String name = askName();
                     scanner = new Scanner(System.in);
                     String surname = askSurname();
-                    System.out.println(surname);
                     School.addPerson(new Student(name, surname));
                     launchMenu();
                     break;
