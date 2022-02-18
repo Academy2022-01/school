@@ -5,8 +5,8 @@ import java.util.stream.Collectors;
 
 public class School {
 
-    Student student;
-
+   // Student student;
+//non dichiarare/istanziare oggetti quando non vengono utilizzati
     public static Set<Student> setStudent = new HashSet<>();
     public static Set<Tutor> setTutor = new HashSet<>();
 

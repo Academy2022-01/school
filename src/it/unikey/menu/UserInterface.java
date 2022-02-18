@@ -28,7 +28,7 @@ public class UserInterface {
             choise = true;
             launchMenu();
         } catch (UsernameNotFoundException e) {
-            System.out.println("L'username non è valido!");
+            System.out.println("L'username non è valido!");//hai fatto la classe custum di eccezioni utilizza il metodo implementato
             choise = false;
             login();
         }catch (PasswordNotFoundException e){
@@ -129,14 +129,14 @@ public class UserInterface {
             return false;
         }
         try {
-            int d = Integer.parseInt(strNum);
+            int d = Integer.parseInt(strNum);// puoi ache non utilizzare una variabile se poi il ritorno del metodo lo setti a booleano
         } catch (NumberFormatException nfe) {
             return false;
         }
         return true;
     }
 
-    public static int returnChoise() {
+    public static int returnChoise() {     //hai 2 metodi ridondanti getOnlyNumericInput e IsInteger non fanno la stessa cosa^?
         try {
             int scelta = getOnlyNumericInput();
             if (choiseIsAvailable(scelta)) {

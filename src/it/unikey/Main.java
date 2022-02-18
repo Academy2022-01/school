@@ -1,5 +1,6 @@
 package it.unikey;
 
+import com.sun.xml.internal.bind.v2.TODO;
 import it.unikey.menu.UserInterface;
 
 public class Main {
@@ -44,12 +45,13 @@ public class Main {
         mario.assignStudentToTutor(gianni);
         mario.assignStudentToTutor(gianniOmonimo);
         Tutor.printStudentForTutor();*/
-
+//cancellare tutto quello che non viene utlizzato , sia istanze non utilizzate , stampe e commenti.
         UserInterface us = new UserInterface();
         UserInterface.login();
 
 
     }
-
+//TODO commento finale: mi piace la logica e come hai suddiviso le classi usando anche quasi tutti quello che avete studiato . Bono le eccezioni costum ma utilizza i metidi che ti danno a disposizione , rendere piu pulito il codice da commenti e metodi e codice non utilizzato !!
+    //TODO col fatto che si doveva consegnare , ma comuqneu è sempre preferibile salvarsi in una cartella log tutti i file che si utilizzano , lo hai fatto in parte
 }
 

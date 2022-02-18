@@ -24,8 +24,11 @@ public class Student extends Person {
         return (isPresentInStudentsSet && !isPresentInTutorsSet) ? false : true;
     }*/
 
-    public  boolean hasAssignedTutor(){
+    //se non iene piu utilizzato cancellare il metodo .Va bene quando ci si esercita e si fa testing , ma al momento di una consegna di un elaborato deve essere pulito .
+    //no commenti , no istanze /metodi non utilizzati . il codice deve essere parlante quindi non dovrebbero servire i commenti per spiegare
 
+    public  boolean hasAssignedTutor(){
+//non serve settare il boolean a fale perche è il suo valore di default
         boolean isPresentInStudentsSet = false;
         boolean isPresentInTutorsSet = false;
         for (Student elem : setStudent){
