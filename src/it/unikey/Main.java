@@ -10,9 +10,15 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+//meglio dividere tutto in packege diversi a seconda delle loro funzionalita
+//problema con le date , dovresti gestire l eccezione e scrivere il formato corretto da utilizzare
+//la stampa è meglio non utilizzare il toString ma customizzare la stampa
+//cancellare le istanze non utlizzate , va bene fare dei test durante la programazione ma poi quando si consegna pulire smepre il codice
+//cancellare semore i commenti , il codice deve essere sempre pulito e parlante
+    //lettura e scrittura file meglio mettere in una classe a parte che gestisce solo quello non nel main
 
-
-    private static int menu;
+//TODO molte mancaze di funzionalità , cicli troppo innestati , poca chiarezza nel codice scritto 
+    private static int menu;//??
 
     public static void main(String[] args) {
 
@@ -90,7 +96,7 @@ public class Main {
         //String ciao =Studente.visualizzaStudente();
 
         try {
-            Files.write(Paths.get(pathScrittura),empty.getBytes(), StandardOpenOption.APPEND);
+            Files.write(Paths.get(pathScrittura),empty.getBytes(), StandardOpenOption.APPEND);    //a cosa serve?
         } catch (IOException e) {
             e.printStackTrace();
         }

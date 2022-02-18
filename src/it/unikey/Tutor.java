@@ -57,7 +57,7 @@ public class Tutor extends Persona {
                 .sorted(Comparator.comparing(Tutor :: getCognome))
                 .sorted(Comparator.comparing(Tutor :: getNome))
                 .forEach(System.out :: println);
-        return null;
+        return null;//non è best practisce far tornare null, si fa un metodo void oppure si usa un un booleano che checka se è andato a buon fine il salvataggio
     }
 
     @Override

@@ -1,5 +1,5 @@
 package it.unikey;
-public class Persona {
+public class Persona {  //meglio usare una classe astratta
     String nome;
     String cognome;
 

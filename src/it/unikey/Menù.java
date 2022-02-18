@@ -1,7 +1,10 @@
 package it.unikey;
 
 import java.util.Scanner;
-
+//vietato usare accenti per nomi di classi, variabile e metodi , assolutamente da non fare!!
+//non necessario fare tutti questi cicli annidati , sopratutto con loop infinito che non serve
+//meglio aggiungere un opzione nel menu che fa scegliere all utente se continuare a fare azioni o uscire , e usare variabili booleane per gestire i cicli while cambiando il valore quando si deve uscire dal ciclo
+//manca tutta la classe scuola , username e password
 public class Menù {
     public static void menùScelta(){
         Scanner scanner = new Scanner(System.in);
@@ -18,7 +21,7 @@ public class Menù {
             do{
                 menù = scanner.nextInt();
 
-            } while (menù<0 && menù>4);
+            } while (menù<0 && menù>4);//??????????????????????????????????
             switch (menù){
                 case 1:
                     Studente.creaStudente();
