@@ -13,7 +13,7 @@ public class MenuUtente {
     private static List<String> utenze = new ArrayList<>();
 
     public static void start() {
-        boolean done = false;
+        boolean done = false; // è il valore di default
         String comando = "login";
         while (!done) {
             Scanner read = new Scanner(System.in);
