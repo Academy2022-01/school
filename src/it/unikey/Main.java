@@ -2,7 +2,12 @@ package it.unikey;
 
 import it.unikey.Menù.UserInterface;
 import it.unikey.control.FileLog;
-
+//come gia detto piu volte i commenti vanno levati , codice sempre pulito . sta cominciando ad essere noioso ripeterlo
+//ma non richiami mai la funzione di scrivere su file lo studente e il tutor o sbaglio ?
+//TODO codice strutturato bene , suddiviso correttamente con ogni metodo le sue funzionalitò  e anche la divisione dei package buona .
+//TODO ottimo uso delle mappe
+//TODO ho visto che nel users.txt ci sono 3 utense diverse , ma non è stato gestita questa possibilita. vieni loggato solo quando matchano l'user e pass del 1
+//TODO manca l'ordinamento dei nomi in ordine alfabetico
 public class Main {
     public static void main(String[] args) {
 

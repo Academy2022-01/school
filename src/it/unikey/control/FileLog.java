@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class FileLog {
 
-    static String path = "C:\\Users\\ACER\\IdeaProjects\\Scuola\\src\\it\\unikey\\log\\users.txt";
+    static String path = "C:\\Users\\sarag\\Academy\\CodeReview\\school\\src\\it\\unikey\\log\\users.txt";
 
     public static void checkUser(String user, String password) throws PasswordNotFoundException, UsernameNotFoundException {
 

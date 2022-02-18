@@ -10,8 +10,8 @@ import java.nio.file.StandardOpenOption;
 
 public class FileGestion {
 
-    static String pathStudent = "C:\\Users\\ACER\\IdeaProjects\\Scuola\\src\\it\\unikey\\log\\listStudent.txt";
-    static String pathTutor = "C:\\Users\\ACER\\IdeaProjects\\Scuola\\src\\it\\unikey\\log\\listTutor.txt";
+    static String pathStudent = "C:\\Users\\sarag\\Academy\\CodeReview\\school\\src\\it\\unikey\\log\\listStudent.txt";
+    static String pathTutor = "C:\\Users\\sarag\\Academy\\CodeReview\\school\\src\\it\\unikey\\log\\listTutor.txt";
 
     public static void writeListStudent() {
         School.setStudent.forEach(s -> {
