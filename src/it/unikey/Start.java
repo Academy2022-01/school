@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Start {
-    private String pathUtenze = "G:\\FileTxTperJava\\utenze.txt";
+    private String pathUtenze = "log/utenze.txt"; //ho cambiato il path come avevamo detto in modo tale da poterlo girare anche sulla mia "macchina"
 
 
     Studente stu = new Studente();

@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class Tutor extends Persona {
 
     private String dataNascita;
-    private String pathTutor = "G:\\FileTxTperJava\\elencoTutor.txt";
+    private String pathTutor = "log/elencoTutor.txt";
 
 
     public Tutor() {
@@ -36,16 +36,20 @@ public class Tutor extends Persona {
                 e.printStackTrace();
             }
         }
+        scanner.nextLine(); //Aggiunta del prof
         System.out.println("Inserisci nome");
-        String newTutor = scanner.next() + " ";
+        String newTutor = scanner.nextLine() + " "; //era next()
         newTutor = newTutor.substring(0,1).toUpperCase() + newTutor.substring(1).toLowerCase();
 
         System.out.println("Inserisci cognome");
-        String cognomeTutor = scanner.next() + " ";
+        String cognomeTutor = scanner.nextLine() + " "; //era next()
         cognomeTutor = cognomeTutor.substring(0,1).toUpperCase() + cognomeTutor.substring(1).toLowerCase();
 
+        //Commento del prof:
+        //ho dovuto inserire questo nextline a vuoto inizialmente perché usando solo next() non mi considerava la seconda parte di un cognome con uno spazio
+        //come ad esempio il mio :(
         System.out.println("Inserisci data di nascita gg/m/anno");
-        String dataTutor = newTutor + cognomeTutor + scanner.next() + ",\n";
+        String dataTutor = newTutor + cognomeTutor + scanner.nextLine() + ",\n"; //era next()
         try {
             Files.write(Paths.get(pathTutor), dataTutor.getBytes(), StandardOpenOption.APPEND);
 

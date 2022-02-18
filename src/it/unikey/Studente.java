@@ -15,7 +15,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Studente extends Persona{
 
     private int numeroMatricola;
-    private String pathStudenti = "G:\\FileTxTperJava\\elencoStudenti.txt";
+    private String pathStudenti = "log/elencoStudenti.txt";
 
     Tutor tutor = new Tutor();
 
@@ -47,16 +47,19 @@ public class Studente extends Persona{
                 e.printStackTrace();
             }
         }
+        scanner.nextLine();
         System.out.println("Inserisci nome");
-        String nomeStudente = scanner.next();
+        String nomeStudente = scanner.nextLine();
 
         nomeStudente = nomeStudente.substring(0,1).toUpperCase() + nomeStudente.substring(1).toLowerCase();
 
         System.out.println("Inserisci cognome");
-        String cognomeStudente = scanner.next();
+        String cognomeStudente = scanner.nextLine();
 
         cognomeStudente = cognomeStudente.substring(0,1).toUpperCase() + cognomeStudente.substring(1).toLowerCase();
 
+        //Commento del prof:
+        //Come nella classe tutor hao fatto il change di next() in nextLine() per poter inserire persone con cognomi nobili come il mio
         Studente nuovoStudente = new Studente(nomeStudente, cognomeStudente);
         String nomeCognome = nuovoStudente.getCognome() + " " +
                 nuovoStudente.getNome() + " " +
