@@ -14,7 +14,7 @@ public class TutorManager {
 
     static ArrayList<Tutor> tutors = new ArrayList<>();
     static Random randomGen = new Random();
-    static String writePath = "C:\\Users\\jonat\\Desktop\\";
+    static String writePath = "log\\";
     static String nomeFile = "ListaTutor.txt";
 
     public static void registerTutor(Tutor tutor) //il tutor lo creo nella UI

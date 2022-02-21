@@ -33,11 +33,16 @@ public class UserInterface {
             Login login = new Login(fullName, password);
             LoginManager.loginCheck(login);
 
+
+            //Commento del prof:
+            //come ti ho detto anche a voce qui nell'else ti ho inserito uno scanner1.nextLine() a vuoto visto che hai scelto
+            //di usare il nextInt() per la password
             if (LoginManager.loginCheck(login) == true) {
                 loginMenu = false;
                 mainMenu();
             } else {
                 System.out.println("Nome, cognome o password non corretti");
+                scanner1.nextLine();
             }
         }
     }

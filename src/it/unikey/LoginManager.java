@@ -8,7 +8,7 @@ import java.util.List;
 
 public class LoginManager {
 
-    static String readWritePath = "C:\\Users\\jonat\\Desktop\\";
+    static String readWritePath = "log\\";
     static String nomeFile = "LoginInfoLog.txt";
 
 
@@ -38,10 +38,11 @@ public class LoginManager {
                         return false;
                     }
                 }
-            } catch (FileNotFoundException e)
+                //Commento del prof:
+                //Come ti suggeriva anche l'IntelliSense qui non era utile dividere il blocco try catch con doppio catch per
+                //intercettare la FileNotFoundException visto che essa stessa estende la IOException
+            } catch (IOException e)
             {
-                e.printStackTrace();
-            } catch (IOException e) {
                 e.printStackTrace();
             }
         }else

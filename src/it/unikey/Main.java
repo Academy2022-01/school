@@ -7,6 +7,14 @@ import java.util.Set;
 
 public class Main {
 
+    //Commento del prof:
+    //I menu sono il tuo pane quotidiano quindi non avevo dubbi che ti saresti sentito a tuo agio con questo esercizio,
+    //anche se ti sei dimenticato di mandare il nextLine() a vuoto in caso di utente e password non trovati nel file
+    //LoginInfoLog.txt
+    //Cerca di evitare poi i commenti che ho visto che li hai messi sparsi nel codice, a livello di clean code sono da evitare
+    //anche se inizialmente ti possono essere utili, ma cerca di aiutarti usando variabili parlanti, ad esempio quando usi il doppio
+    //scanner non denominarli con scanner1 ma dai dei nomi parlanti
+
     public static void main(String[] args) {
         //UserInterface.loginMenu();
         Student jonathan = new Student("Jonathan", "Mosetti");

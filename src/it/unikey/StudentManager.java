@@ -18,7 +18,7 @@ public class StudentManager {
 
     static ArrayList<Student> students = new ArrayList<>();
     static Random randomGen = new Random();
-    static String writePath = "C:\\Users\\jonat\\Desktop\\";
+    static String writePath = "log\\";
     static String nomeFile = "ListaStudenti.txt";
 
     public static void registerStudent(Student student) // lo sudente lo creo nella UI
