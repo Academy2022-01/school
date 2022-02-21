@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class Tutor extends  Persona {
 
     LocalDate dataNascita;
-    private String pathTutor = "C:\\Users\\Silvia\\Desktop\\esercizio scuola\\nuoviTutor.txt\\";
+    private String pathTutor = "log\\nuoviTutor.txt\\";
 
 
     public Tutor(String nome, String cognome, LocalDate dataNascita) {
@@ -50,6 +50,10 @@ public class Tutor extends  Persona {
             }
 
         }
+        //Commento del prof
+        //Capisco la fretta di consegnare ma ricordati che in questo metodo non hai messo nessuna indicazione su cosa l'utente
+        //sta per inserire da tastiera, cosa che invece hai correttamente fatto nella classe studente. Bastava inserire una stampa
+        //che ci indicasse di "inserire un nome" o di "inserire un cognome"
         String nomeTutor = scanner.next();
         String cognomeTutor = scanner.next();
 
@@ -64,7 +68,10 @@ public class Tutor extends  Persona {
     //METODO VISUALIZZA TUTOR
     public static void visualizzaTutor() {
 
-        String pathLettura = "C:\\Users\\Silvia\\Desktop\\esercizio scuola\\nuoviTutor.txt";
+        //Commento del prof
+        //Ti sei definita una stringa pathLettura che di fatto è ridondante visto che è esattamente uguale al pathTutor che
+        //fa parte di questa stessa classe (riga - 18)
+        String pathLettura = "log\\nuoviTutor.txt";
 
         try (FileReader fr = new FileReader(pathLettura);
              BufferedReader br = new BufferedReader(fr)) {

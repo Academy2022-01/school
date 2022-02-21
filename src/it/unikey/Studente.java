@@ -16,7 +16,7 @@ public class Studente extends Persona implements Comparable<Studente>{
 
     private UUID numeroMatricola;
     private Tutor tutor;
-    private String pathStudente = "C:\\Users\\Silvia\\Desktop\\esercizio scuola\\nuoviStudenti.txt\\";
+    private String pathStudente = "log\\nuoviStudenti.txt\\";
 
 
     public Studente() {
@@ -52,11 +52,17 @@ public class Studente extends Persona implements Comparable<Studente>{
             }
 
         }
-
+        //Commento del prof:
+        //Come ti ho spiegato a voce, ti ho cambiato tutti gli scanner.next() in scanner.nextLine() in modo tale da accettare
+        //anche nomi e cognomi con uno spazio in mezzo (Come ad esempio il mio Di Rosa) e come ti ho spiegato sempre a voce
+        //ho dovuto mettere un nextLine() a vuoto per intercettare il carattere di invio "\n" che inserisci quando vai a compiere
+        //una scelta nel main (Perché premi da tastiera un numero e poi invio, il metodo che ti sei fatta nel main intercetta solo
+        //il numero e l'invio verrebbe intercettato dal nextLine() che è presente nel nomeStudente qui sotto - riga 63)
+        scanner.nextLine();
         System.out.println("Inserisci il nome: ");
-        String nomeStudente= scanner.next();
+        String nomeStudente= scanner.nextLine();
         System.out.println("Inserisci il cognome: ");
-        String cognomeStudente = scanner.next();
+        String cognomeStudente = scanner.nextLine();
 
         try {
             Files.write(Paths.get(pathStudente), (cognomeStudente + " " + nomeStudente + "\n").getBytes(), StandardOpenOption.APPEND);
@@ -69,7 +75,10 @@ public class Studente extends Persona implements Comparable<Studente>{
     //METODO VISUALIZZA STUDENTE
     public static void visualizzaStudente() {
 
-        String pathLettura ="C:\\Users\\Silvia\\Desktop\\esercizio scuola\\nuoviStudenti.txt\\";
+        //Commento del prof
+        //Come hai fatto anche nella classe tutor, ti sei definita una stringa ridondante, visto che è esattamente uguale alla
+        //stringa pathStudente che è a riga 19 di questa classe
+        String pathLettura ="log\\nuoviStudenti.txt\\";
 
         try (FileReader fr = new FileReader(pathLettura);
              BufferedReader br = new BufferedReader(fr)) {

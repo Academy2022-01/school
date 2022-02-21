@@ -10,6 +10,12 @@ import java.util.Scanner;
 
 public class Main {
 
+    //Commento del prof:
+    //Nel complesso non è male, è abbastanza pulito e i punti che hai fatto sono fatti bene. Ti sei persa qualcosina ma può
+    //capitare. Cerca magari di finire l'esercizio a tempo perso con gli altri punti che avevo assegnato. Ma se sei in grado di
+    //capire tutto quello che hai scritto è gia molto positivo
+
+
     public static void main(String[] args) {
 
         Studente a = new Studente("Gigi", "Pippo");
