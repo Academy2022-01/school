@@ -8,6 +8,17 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;
 
+//TODO
+//come ripetutuo piu volte , cancellare i commenti quando si consegna un elaborato .
+//quando inserisco un numero non valido e mi richiede la scelta non viene presa in considerazione ma ritorna l interfaccia di menu , questo perche hai usato la stessa variabile che infatti non viene ricunosciuta , bastava lasciare solo la stamba e poi tramite il do ti richiedeva l interfaccia .
+//giusto l'uso del do while per il meni
+//manca la parte di map , di gestione della data del tutor e anche l inserimento del tutor non è user friendly perche ti sei dimenticata di scrivere cosa devo inseire
+//hai inpostato la parte user e password sul main , conveniva farla in un metodo o in una classe apparte
+//ti mancava inserire la parte di richiesta user e pass e controllarla con quelle salvate sul file
+//ti manca tutta il passaggio tra array list e array e la modifica dei dati come richiesto dal documento
+// sono state svolte le funzionalità piu basi  e semolice . Sono state impostate bene e buon utilizzo dei cicli . Sarebbe stato buono inserire anche la parte delle exception customizzate che poteva arrichire .
+// regola generale meglio usare il main solo per richiamare i metodi che ti servono . cercare sempre di mettere tutte le funzionalità dell applicativo in classi appropiate e dividere le suddette classi in package
+//Esempio : "package Entities : Studente e Tutor . Persona poteva essere anche una classe astratta ( in quel caso inserire una sotto cartella abstract nel package ) , package control: login e main fuori dai package
 public class Main {
 
     public static void main(String[] args) {
@@ -90,7 +101,8 @@ public class Main {
 
                 default:
                     System.out.println("Inserisci un numero valido");
-                    scelte = scanner.next();
+
+                  //  scelte = scanner.next();
                     break;
             }
 

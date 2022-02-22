@@ -16,7 +16,7 @@ public class Studente extends Persona implements Comparable<Studente>{
 
     private UUID numeroMatricola;
     private Tutor tutor;
-    private String pathStudente = "C:\\Users\\Silvia\\Desktop\\esercizio scuola\\nuoviStudenti.txt\\";
+    private String pathStudente = "C:\\Users\\sarag\\OneDrive\\Desktop\\NuoviStudenti.txt";
 
 
     public Studente() {
@@ -69,7 +69,7 @@ public class Studente extends Persona implements Comparable<Studente>{
     //METODO VISUALIZZA STUDENTE
     public static void visualizzaStudente() {
 
-        String pathLettura ="C:\\Users\\Silvia\\Desktop\\esercizio scuola\\nuoviStudenti.txt\\";
+        String pathLettura ="C:\\Users\\sarag\\OneDrive\\Desktop\\NuoviStudenti.txt";
 
         try (FileReader fr = new FileReader(pathLettura);
              BufferedReader br = new BufferedReader(fr)) {

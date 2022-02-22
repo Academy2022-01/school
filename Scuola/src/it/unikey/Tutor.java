@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class Tutor extends  Persona {
 
     LocalDate dataNascita;
-    private String pathTutor = "C:\\Users\\Silvia\\Desktop\\esercizio scuola\\nuoviTutor.txt\\";
+    private String pathTutor = "C:\\Users\\sarag\\OneDrive\\Desktop\\NuoviTutor.txt";
 
 
     public Tutor(String nome, String cognome, LocalDate dataNascita) {
@@ -64,7 +64,7 @@ public class Tutor extends  Persona {
     //METODO VISUALIZZA TUTOR
     public static void visualizzaTutor() {
 
-        String pathLettura = "C:\\Users\\Silvia\\Desktop\\esercizio scuola\\nuoviTutor.txt";
+        String pathLettura = "C:\\Users\\sarag\\OneDrive\\Desktop\\NuoviTutor.txt";
 
         try (FileReader fr = new FileReader(pathLettura);
              BufferedReader br = new BufferedReader(fr)) {
