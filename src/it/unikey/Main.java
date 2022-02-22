@@ -40,6 +40,12 @@ punto extra:
 	rendere invisibile l'input della password, o sostituire con *
 */
 public class Main {
+//TODO
+    //opzione esci dell' interfaccia non fuzniona, perche quando inserisco lo 0 che rientra nel caso default mi stampa " numero sbagliato "
+    //molto apprezzato la suddivisione in classi per il login e la console , anche lo witch dell'nterfaccia si poteva inserire in console  e richiamre solo il metodo nel main.
+    //manca la parte di passaggio da arraylist e array e il cambio formato per i nomi e cognomi con la lettera maiuscola
+    //non è best practice avere tutti gli attributi statici
+    //ti ho corretto il nextline dello scanner perhce dva problemi nella login quando veniva ripetuta
 
     public static void main(String[] args) throws IOException {
         Login login = new Login();

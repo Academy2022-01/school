@@ -8,3 +8,5 @@ Matricola: 0 Nome: giulia  Cognome: ok
 Matricola: 0 Nome: lorenzo  Cognome: mogoro 
 Matricola: 1 Nome: hik  Cognome: mat 
 Matricola: 2 Nome: paolo  Cognome: feroci 
+Matricola: 0 Nome: giulio  Cognome: pippo 
+Matricola: 1 Nome: poppo  Cognome: c 

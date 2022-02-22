@@ -12,10 +12,10 @@ public class Login {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("username: ");
-        String username = sc.nextLine();
+        String username = sc.next();
 
         System.out.println("Password: ");
-        String password = sc.nextLine();
+        String password = sc.next();
 
         String path ="src\\account\\utenze.txt";
 
