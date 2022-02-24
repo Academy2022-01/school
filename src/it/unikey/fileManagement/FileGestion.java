@@ -10,13 +10,10 @@ import java.nio.file.StandardOpenOption;
 
 public class FileGestion {
 
-<<<<<<< HEAD
-    static String pathStudent = "C:\\Users\\flvbr\\IdeaProjects\\school\\src\\it\\unikey\\log\\listStudent.txt";
-    static String pathTutor = "C:\\Users\\flvbr\\IdeaProjects\\school\\src\\it\\unikey\\log\\listTutor.txt";
-=======
-    static String pathStudent = "C:\\Users\\paolu\\IdeaProjects\\Scuola\\src\\it\\unikey\\log\\listStudent.txt";
-    static String pathTutor = "C:\\Users\\paolu\\IdeaProjects\\Scuola\\src\\it\\unikey\\log\\listTutor.txt";
->>>>>>> Alessio_Paolucci
+    //Commento del prof: ho cambiato i path senza usare l'absolute path ma quello a partire dalla root, senno dal mio pc
+    //non sarebbe stato accessibile questo file
+    static String pathStudent = "src/it/unikey/log/listStudent.txt";
+    static String pathTutor = "src/it/unikey/log/listTutor.txt";
 
     public static void writeListStudent(){
         School.setStudent.forEach(s -> {

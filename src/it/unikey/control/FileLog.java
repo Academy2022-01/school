@@ -1,11 +1,7 @@
 package it.unikey.control;
 
 import it.unikey.exception.PasswordNotFoundException;
-<<<<<<< HEAD
-=======
 import it.unikey.exception.UsernameNotFoundException;
->>>>>>> Alessio_Paolucci
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -17,11 +13,10 @@ import java.util.Map;
 
 public class FileLog {
 
-<<<<<<< HEAD
-    static String path = "C:\\Users\\flvbr\\IdeaProjects\\school\\src\\it\\unikey\\log\\users.txt";
-=======
-    static String path = "C:\\Users\\paolu\\IdeaProjects\\Scuola\\src\\it\\unikey\\log\\users.txt";
->>>>>>> Alessio_Paolucci
+    //Commento del prof: ho cambiato il path senza usare l'absolute path ma quello a partire dalla root, senno dal mio pc
+    //non sarebbe stato accessibile questo file
+    static String path = "src/it/unikey/log/users.txt";
+
 
     public static void checkUser(String user, String password) throws PasswordNotFoundException, UsernameNotFoundException{
 

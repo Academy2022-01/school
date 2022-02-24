@@ -1,10 +1,10 @@
 package it.unikey;
 
 import it.unikey.menu.UserInterface;
-<<<<<<< HEAD
-import it.unikey.control.FileLog;
-=======
->>>>>>> Alessio_Paolucci
+
+//Commenti del prof:
+//Il codice è molto pulito, hai implementato anche un'ottima gestione degli errori, ma occhio ai merge conflicts e anche
+//ai percorsi dei file che ho dovuto cambiare per fare in modo che girasse anche sul mio pc
 
 public class Main {
     public static void main(String[] args) {
